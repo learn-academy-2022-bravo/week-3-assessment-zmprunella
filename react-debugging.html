@@ -62,12 +62,35 @@
           }
           // No need to change anything ABOVE this line ^
 
+
+// Psuedo
+
+// Uncaught SyntaxError: /Inline Babel script: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (48:12)
+
+// The error says it must be wrapped in an enclosing tag
+// Suggesting using fragments <> and </> 
+// It says the error is in lines 48:12 but I know that it has to be below this.
+// Somewhere between 73 and 90
+// Place fragments
+// That cleared up all of the red lines expect 1 in the line 77
+
+// Uncaught SyntaxError: /Inline Babel script: JSX attributes must only be assigned a non-empty expression. (58:28)
+
+// must only be assigned a non-empty expression - must mean to fill the empty expression.
+// Fill curly's with JSX attribute.
+//drawCard should be the attribute but for some reason it is saying it is not definited.
+// But it is defined in the section above. 
+// Figured out I needed to add a this. before drawCard and that fixed it.
+//Then needed to do the same thing for shuffle and that was the last fix.
+
+
           return(
+            <>
             <h1>Draw a Card</h1>
-            <button onClick={}>
+            <button onClick={this.drawCard}>
               Click to Draw a Card
             </button>
-            <button onClick={shuffle}>
+            <button onClick={this.shuffle}>
               Return Cards and Shuffle Deck
             </button>
             <div style={handStyles}>
@@ -79,6 +102,7 @@
                 )
               })}
             </div>
+            </>
           )
         }
       }
