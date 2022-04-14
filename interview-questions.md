@@ -43,7 +43,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: Yarn has to do with running react in JS. Not sure but maybe it's Jest files that are modified in a react appication?
 
-  Researched answer: Also created by FaceBook, Yarn is a packaging software system in Javascript. It provies security, consistency and greater speed. 
+  Researched answer: Also created by FaceBook, Yarn is a packaging software system in Javascript. It provies security, consistency and greater speed. Creates yarn.locl files, node_modules.
 
 
 
